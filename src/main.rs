@@ -2,7 +2,7 @@ extern crate anyhow;
 extern crate deltalake;
 
 #[tokio::main(flavor = "current_thread")]
-async fn read_my_delta() -> anyhow::Result<()> {
+async fn main() -> anyhow::Result<()> {
     // The following ENV_VARS must be set:
     // E.g.: export AZURE_STORAGE_ACCOUNT_NAME=
     // E.g.: export AZURE_STORAGE_ACCOUNT_KEY=
@@ -14,15 +14,7 @@ async fn read_my_delta() -> anyhow::Result<()> {
             .await
             .unwrap();
 
-    
-    
     println!("{}", table);
     
     Ok(())
-}
-
-
-fn main() {
-    let r = read_my_delta();
-    println!("{:?}", r);
 }
