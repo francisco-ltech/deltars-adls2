@@ -6,6 +6,8 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-deltalake = "0.4.0"
+deltalake = { git = "https://github.com/delta-io/delta-rs", rev = "b713c4232b04de44658c9946734a78b170857603", features = [
+  "azure",
+]}
 anyhow = "1.0.53"
 tokio = "1.16.1"
